@@ -85,7 +85,8 @@ async function sendMessage() {
     })
   });
 
-  const data = await response.json();
+ const textData = await response.text();
+console.log(textData);
 
   chat.innerHTML += `
     <div class="msg bot">${data.reply}</div>
